@@ -20,7 +20,7 @@ npm install grunt-typo3-phpunit --save-dev
 grunt.loadNpmTasks('grunt-typo3-phpunit');
 ```
 
-## PHPMD task
+## TYPO3 PHPUnit task
 
 _Run this task with the `grunt typo3-phpunit` command._
 
