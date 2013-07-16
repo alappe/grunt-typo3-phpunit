@@ -1,0 +1,27 @@
+{
+  "name": "grunt-typo3-phpunit",
+  "version": "0.1.0",
+  "description": "Grunt plugin for running TYPO3 UnitTests with the phpunit-extension.",
+  "main": "tasks/phpmd.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alappe/grunt-typo3-phpunit.git"
+  },
+  "keywords": [
+    "gruntplugin",
+    "phpmd",
+    "mess-detection",
+    "ci",
+    "continous-integration"
+  ],
+  "author": {
+    "name": "Andreas Lappe"
+  },
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/alappe/grunt-typo3-phpunit/issues"
+  }
+}
