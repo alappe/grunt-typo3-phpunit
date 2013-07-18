@@ -1,6 +1,6 @@
 {
   "name": "grunt-typo3-phpunit",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Grunt plugin for running TYPO3 UnitTests with the phpunit-extension.",
   "main": "tasks/typo3-phpunit.js",
   "scripts": {

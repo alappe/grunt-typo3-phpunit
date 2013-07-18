@@ -36,7 +36,6 @@ exports.init = (grunt) ->
   exports.setup = (runner) ->
     target = runner.data.target
     config = runner.options defaults
-    console.log config
     cmd = buildCommand target
     grunt.log.writeln "Starting TYPO3 PHPUnit (target: #{runner.target.cyan}) in #{target.cyan}"
     grunt.verbose.writeln "Execute: #{cmd}"
