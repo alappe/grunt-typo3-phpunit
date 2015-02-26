@@ -1,6 +1,6 @@
 # grunt-typo3-phpunit
 
-> Grunt plugin to run [TYPO3 PHPUnit](http://forge.typo3.org/projects/show/extension-phpunit) in the commandline.
+> Grunt plugin to run [PHPUnit](https://phpunit.de) inside of TYPO3 CMS.
 
 _This plugin is developed for Grunt `0.4.0` and is not tested for backward compatibility with Grunt `0.3.x`._
 
@@ -12,7 +12,11 @@ _This plugin is developed for Grunt `0.4.0` and is not tested for backward compa
 npm install grunt-typo3-phpunit --save-dev
 ```
 
-2. [Install TYPO3 Extension](http://forge.typo3.org/projects/show/extension-phpunit)
+2. Install phpunit in your TYPO3 installation:
+
+```shell
+cd $TYPO3_SRC && composer install
+```
 
 3. Add this to your project's `Gruntfile.js`:
 
@@ -77,7 +81,7 @@ Only change this if you use a fork of phpunit or similar.
 
 #### d
 Type: `Object`
-Default: `{}`
+Default: `{ "c": "typo3/sysext/core/Build/UnitTests.xml" }`
 
 Configure single-dash commandline-arguments such as -v by adding key-value pairs: `'v':''`.
 

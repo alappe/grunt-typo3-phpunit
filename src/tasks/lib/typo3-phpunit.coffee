@@ -1,8 +1,8 @@
 ###
 grunt-typo3-phpunit
 
-Copyright (c) 2013 Andreas Lappe
-http://kaeufli.ch
+Copyright (c) 2015 Andreas Lappe
+http://zimmer7.com
 Licensed under the BSD license.
 ###
 
@@ -15,17 +15,17 @@ exports.init = (grunt) ->
   cmd = done = null
   defaults =
     environment: ''
-    cliDispatch: 'typo3/cli_dispatch.phpsh'
     cwd: null
-    phpunitExtension: 'phpunit'
+    phpunitExtension: 'typo3_src/bin/phpunit'
     target: ''
-    d: {}
+    d:
+      c: 'typo3/sysext/core/Build/UnitTests.xml'
     dd: {}
     ignoreExitCode: 99
     maxBuffer: 200*1024
 
   buildCommand = (target) ->
-    cmd = "#{config.environment} #{config.cliDispatch} #{config.phpunitExtension}"
+    cmd = "#{config.environment} #{config.phpunitExtension}"
     # Add single-dash options
     cmd += " -#{key} #{value}" for key, value of config.d
     # Add double-dash options
@@ -37,7 +37,10 @@ exports.init = (grunt) ->
     target = runner.data.target
     config = runner.options defaults
     cmd = buildCommand target
-    grunt.log.writeln "Starting TYPO3 PHPUnit (target: #{runner.target.cyan}) in #{target.cyan}"
+    msg = """
+    Starting TYPO3 PHPUnit (target: #{runner.target.cyan}) in #{target.cyan}"
+    """
+    grunt.log.writeln msg
     grunt.verbose.writeln "Execute: #{cmd}"
     done = runner.async()
 
